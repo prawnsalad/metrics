@@ -111,6 +111,7 @@ $(function() {
 			var series = [];
 			var series_by_name = {};
 			var chart_series_by_name = {};
+			var idx;
 
 			for(var property_idx in properties) {
 				var data = {
@@ -118,7 +119,7 @@ $(function() {
 					data: []
 				};
 
-				for (var idx in json) {
+				for (idx in json) {
 					data.data.push([
 						json[idx].time * 1000,
 						json[idx][properties[property_idx]]
@@ -130,7 +131,6 @@ $(function() {
 			}
 
 			// Get a list of current series added to the chart
-			var idx;
 			for (idx in self.chart.series) {
 				chart_series_by_name[self.chart.series[idx].name] = self.chart.series[idx];
 			}
