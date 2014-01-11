@@ -1,0 +1,33 @@
+a { cursor: pointer; }
+
+.wrapper { overflow: hidden; }
+.container-toolbar { padding: 0 1em; line-height: 30px; background: #26537C; color:#408DD2; overflow: hidden; }
+.container-main { background: #ffffff; overflow: hidden;  }
+
+.container-toolbar .menu { float: left; }
+.global-control {
+	float: right;
+}
+
+
+.chart {
+	width: 520px;
+	margin: 5px;
+	background: #679FD2;
+	border-radius: 5px;
+	float: left;
+}
+.chart .display-options {
+	margin: 5px 10px 0 10px;
+	text-align: right;
+}
+.refresh-chart { float: left; font-size:0.9em; }
+.bucket-available,
+.bucket-interval {
+	display: inline;
+}
+.the-chart {
+	width: 500px;
+	height: 300px;
+	margin: 5px auto;
+}
