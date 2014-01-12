@@ -145,7 +145,7 @@ $(function() {
 				}
 			}
 
-			self.chart.setTitle(self.info.title || self.info.bucket);
+			self.chart.setTitle({text: self.info.title || self.info.bucket});
 
 			self.chart.hideLoading();
 		});
