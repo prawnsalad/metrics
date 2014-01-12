@@ -180,8 +180,12 @@ $(function() {
 			tooltip: {
 				formatter: function() {
 						return '<b>'+ (self.info.title || self.info.bucket) + ' - ' + this.series.name +'</b><br/>'+
-						Highcharts.dateFormat('%b %e, %Y %H:%M:%S', this.x) + ' = ' + this.y;
+						'<i>'+Highcharts.dateFormat('%b %e, %Y %H:%M:%S', this.x) + '</i> = ' + Highcharts.numberFormat(this.y);
 				}
+			},
+
+			credits: {
+				enabled: false
 			}
 		});
 

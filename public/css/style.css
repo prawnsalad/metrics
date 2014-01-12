@@ -11,7 +11,7 @@ a { cursor: pointer; }
 
 
 .chart {
-	width: 520px;
+	width: 410px;
 	margin: 5px;
 	background: #679FD2;
 	border-radius: 5px;
@@ -27,7 +27,7 @@ a { cursor: pointer; }
 	display: inline;
 }
 .the-chart {
-	width: 500px;
-	height: 300px;
+	width: 400px;
+	height: 250px;
 	margin: 5px auto;
 }
