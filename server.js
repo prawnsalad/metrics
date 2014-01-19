@@ -60,6 +60,9 @@ setInterval(function() {
 }, 10000);
 
 
-stats.on('stats', function(stats) {
-	console.log('Events/sec ', stats.events_second);
-});
+
+if (process.argv.indexOf('-v') > -1) {
+	stats.on('stats', function(stats) {
+		console.log('Events/sec ', stats.events_second);
+	});
+}
