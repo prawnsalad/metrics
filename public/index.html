@@ -41,29 +41,19 @@
 
 
 
+    <script type="text/html" id="tmpl_namespace_browser">
+        <div class="namespace-browser">
+        </div>
+    </script>
+
+
+
     <script type="text/html" id="tmpl_chart">
 <div class="chart">
     <div class="display-options">
         <a class="refresh-chart">refresh</a>
+        <a class="add-bucket">buckets</a>
 
-        <select class="bucket-available">
-            <option>Select a chart..</option>
-            <optgroup label="Internal">
-                <option value="internal.events.stored">Events</option>
-                <option value="internal.server.memory.rss">RSS</option>
-                <option value="internal.server.memory.heap_used">Used heap</option>
-                <option value="internal.server.memory.heap_total">Total heap</option>
-            </optgroup>
-            <optgroup label="Website">
-                <option value="website.login">Logins</option>
-                <option value="website.logout">Logouts</option>
-                <option value="website.response_time">Response Time</option>
-            </optgroup>
-            <optgroup label="Game">
-                <option value="game.opens">Opens</option>
-                <option value="game.questions">Questions</option>
-            </optgroup>
-        </select>
 
         <select class="bucket-interval">
             <option value="_global" selected>Global</option>

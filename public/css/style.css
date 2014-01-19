@@ -21,13 +21,39 @@ a { cursor: pointer; }
 	margin: 5px 10px 0 10px;
 	text-align: right;
 }
-.refresh-chart { float: left; font-size:0.9em; }
-.bucket-available,
-.bucket-interval {
-	display: inline;
+.chart .display-options a {
+	float: left;
+	font-size: 0.9em;
+	margin-right: 1em;
 }
 .the-chart {
 	width: 400px;
 	height: 250px;
 	margin: 5px auto;
+	position: relative;
 }
+
+
+.namespace-browser {
+	padding: 10px;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	border-radius: 5px;
+	background: #ffffff;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.namespace-browser ul {
+	border-left: 1px gray dotted;
+	padding: 0 0 0 0.5em;
+	margin: 5px 0 1em 1em;
+}
+.namespace-browser > ul { border: none; }
+.namespace-browser li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+.namespace-browser .namespace:before { content: "> "; }
+.namespace-browser .bucket { }
+.namespace-browser label { cursor: pointer; }
+.namespace-browser label input { margin-right: 10px; }
