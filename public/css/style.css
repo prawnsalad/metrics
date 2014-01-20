@@ -12,24 +12,28 @@ a { cursor: pointer; }
 
 .chart {
 	width: 410px;
-	margin: 5px;
-	background: #679FD2;
-	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 5px;
 	float: left;
 }
+.chart-inner {
+	position: relative;
+	background: #679FD2;
+	border-radius: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+}
 .chart .display-options {
-	margin: 5px 10px 0 10px;
+	margin: 0 10px 0 10px;
 	text-align: right;
 }
-.chart .display-options a {
+.chart .display-options .menu-item {
 	float: left;
 	font-size: 0.9em;
 	margin-right: 1em;
 }
 .the-chart {
-	width: 400px;
 	height: 250px;
-	margin: 5px auto;
 	position: relative;
 }
 
@@ -54,6 +58,5 @@ a { cursor: pointer; }
 	margin-bottom: 5px;
 }
 .namespace-browser .namespace:before { content: "> "; }
-.namespace-browser .bucket { }
 .namespace-browser label { cursor: pointer; }
 .namespace-browser label input { margin-right: 10px; }

@@ -50,35 +50,38 @@
 
     <script type="text/html" id="tmpl_chart">
 <div class="chart">
-    <div class="display-options">
-        <a class="refresh-chart">refresh</a>
-        <a class="add-bucket">buckets</a>
+    <div class="chart-inner">
+        <div class="display-options">
+            <div class="menu-item sizing"><a class="size-plus">+</a> / <a class="size-minus">-</a></div>
+            <a class="menu-item refresh-chart">refresh</a>
+            <a class="menu-item add-bucket">buckets</a>
 
 
-        <select class="bucket-interval">
-            <option value="_global" selected>Global</option>
-            <option value="d">Daily</option>
-            <option value="h">Hourly</option>
-            <option value="m">Minutely</option>
-            <option value="s">Secondly</option>
-        </select>
+            <select class="bucket-interval">
+                <option value="_global" selected>Global</option>
+                <option value="d">Daily</option>
+                <option value="h">Hourly</option>
+                <option value="m">Minutely</option>
+                <option value="s">Secondly</option>
+            </select>
 
-        <select class="bucket-range">
-            <option value="_global" selected>Global</option>
-            <option value="-1800,0">30 Mins</option>
-            <option value="-3600,0">1 Hour</option>
-            <option value="-7200,0">2 Hours</option>
-            <option value="-12600,0">6 Hours</option>
-            <option value="-43200,0">12 Hours</option>
-            <option value="-86400,0">1 Day</option>
-            <option value="-172800,0">2 Days</option>
-            <option value="-604800,0">1 Week</option>
-            <option value="-1209600,0">2 Weeks</option>
-            <option value="-2419200,0">4 Weeks</option>
-        </select>
+            <select class="bucket-range">
+                <option value="_global" selected>Global</option>
+                <option value="-1800,0">30 Mins</option>
+                <option value="-3600,0">1 Hour</option>
+                <option value="-7200,0">2 Hours</option>
+                <option value="-12600,0">6 Hours</option>
+                <option value="-43200,0">12 Hours</option>
+                <option value="-86400,0">1 Day</option>
+                <option value="-172800,0">2 Days</option>
+                <option value="-604800,0">1 Week</option>
+                <option value="-1209600,0">2 Weeks</option>
+                <option value="-2419200,0">4 Weeks</option>
+            </select>
+        </div>
+
+        <div class="the-chart"></div>
     </div>
-
-    <div class="the-chart"></div>
 </div>
     </script>
 

@@ -30,18 +30,23 @@ $(function() {
 		// These options define what this chart shows
 		self.info = info || {
 			title: '',
-			buckets: [],
-			//buckets: ['website.login count', 'website.logout count'],
+			width_index: 0,
 
+			buckets: [],
 			interval: '_global',
 			time_span: ['_global', '_global'], // [time_from, time_to]
 		};
+
+		// The available widh % this chart can be
+		self.widths = [25, 50, 75, 100];
 
 		self.$el = $($('#tmpl_chart').html());
 		self.addUiEvents();
 
 		self.chart = self.initChart(self.$el.find('.the-chart'));
-		window.c = self;
+
+		// For some reason, the chart does not update its width yet. Wait a little
+		setTimeout(function(){ self.updateView(); }, 1);
 
 		// Refresh our chart every 10 seconds
 		self.refresh_tmr = setInterval(function() { self.refreshChart(); }, 10000);
@@ -81,6 +86,22 @@ $(function() {
 
 		self.$el.on('click', '.refresh-chart', function(event) {
 			self.refreshChart();
+		});
+
+		self.$el.on('click', '.size-plus', function(event) {
+			if (self.info.width_index >= self.widths.length - 1)
+				return;
+
+			self.info.width_index++;
+			self.updateView();
+		});
+
+		self.$el.on('click', '.size-minus', function(event) {
+			if (self.info.width_index <= 0)
+				return;
+
+			self.info.width_index--;
+			self.updateView();
 		});
 
 		self.$el.on('click', '.add-bucket', function(event) {
@@ -151,6 +172,12 @@ $(function() {
 
 		for (var i in buckets)
 			loadData(buckets[i]);
+	};
+
+
+	Chart.prototype.updateView = function() {
+		this.$el.css('width', this.widths[this.info.width_index].toString() + '%');
+		this.chart.reflow();
 	};
 
 
