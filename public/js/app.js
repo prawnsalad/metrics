@@ -31,6 +31,7 @@ $(function() {
 		self.info = info || {
 			title: '',
 			width_index: 0,
+			chart_type: 'spline',
 
 			buckets: [],
 			interval: '_global',
@@ -201,6 +202,7 @@ $(function() {
 
 				var data = {
 					name: bucket_name + ' - ' + property,
+					type: self.info.chart_type,
 					data: []
 				};
 
